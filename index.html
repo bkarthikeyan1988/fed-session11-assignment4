@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title>Session 11 Assignment 4</title>
+	<meta charset="UTF-8" />
+	<script src="js/angular.min.js" type="text/javascript">
+	</script>
+	<script type="text/javascript">
+		angular.module('bindExample', [])
+	    .controller('BindExampleController', ['$scope', function($scope) {
+	      $scope.name = 'Example Name';
+	    }]);
+	</script>
+	<!-- Angular Script Block Ends -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- CSS Block Ends -->
+</head>
+<body ng-app="bindExample">
+	<h2>Use of ng-Bind attribute and show values of scope inside the view.</h2>
+	<div ng-controller="BindExampleController">
+	  <label>Enter name: <input type="text" ng-model="name" onfocus="this.value = ''" ></label><br><br>
+	  Hello <strong ng-bind="name"></strong> !!!
+	</div>
+</body>
+</html>
